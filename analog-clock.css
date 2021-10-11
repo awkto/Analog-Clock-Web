@@ -123,3 +123,57 @@ li {
 .hours li:nth-of-type(12) span {
   transform: rotate(-360deg);
 }
+
+/*clock hands styling */
+.hr-wrapper,
+.min-wrapper,
+.sec-wrapper {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+}
+
+.hr {
+  background: #222;
+  left: 152px;
+  width: 13px;
+  height: 105px;
+  border-radius: 10px;
+  animation: rotateHand 43200s linear infinite;
+}
+.hr:after {
+  background: #222;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  width: 13px;
+  height: 16px;
+}
+
+/*resize the minute hand*/
+.min {
+    background: #222;
+    left: 155px;
+    width: 9px;
+    height: 125px;
+    border-radius: 8px;
+    animation: rotateHand 3600s linear infinite;
+  }
+  .min:after {
+    background: #222;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    width: 9px;
+    height: 16px;
+  }
