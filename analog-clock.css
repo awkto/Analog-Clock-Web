@@ -160,20 +160,46 @@ li {
 
 /*resize the minute hand*/
 .min {
-    background: #222;
-    left: 155px;
-    width: 9px;
-    height: 125px;
-    border-radius: 8px;
-    animation: rotateHand 3600s linear infinite;
+  background: #222;
+  left: 155px;
+  width: 9px;
+  height: 125px;
+  border-radius: 8px;
+  animation: rotateHand 3600s linear infinite;
+}
+.min:after {
+  background: #222;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  width: 9px;
+  height: 16px;
+}
+
+/*second hand styling and rotation*/
+.sec {
+  background: #d00;
+  left: 156.5px;
+  width: 5px;
+  height: 132px;
+  border-radius: 8px;
+  animation: rotateHand 60s linear infinite;
+}
+.sec:after {
+  background: #d00;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3.5px;
+  width: 5px;
+  height: 7px;
+}
+
+@keyframes rotateHand {
+  to {
+    transform: rotate(1turn);
   }
-  .min:after {
-    background: #222;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -8px;
-    width: 9px;
-    height: 16px;
-  }
+}
